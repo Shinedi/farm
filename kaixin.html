@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<style type="text/css">
+	
+	button {width: 100px;
+			height: 100px;
+		    background: #ccc;
+		    border: 4px solid #404040;
+		    border-radius: 50px;
+		    color:#ffffff;
+		    font-size: 18px;
+		    }
+   #div1 {  width: 200px;
+   			height: 200px;
+   		    border:1px solid #ccddaa;}
+</style>
+<script type="text/javascript">
+ $(document).ready(function(e) {
+   	
+   	$("button").eq(0).click(function(){
+
+   			$("img").remove();
+   		    $("#div1").append('<img src="images/3841275_122122013392_2_02.gif" alt="">');
+   		});
+    	$("button").eq(1).click(function(){
+
+   			$("img").remove();
+   		    $("#div1").prepend('<img src="images/3841275_122122013392_2_03.gif" alt="">');
+   		});
+
+   		$("button").eq(2).click(function(){
+
+   			
+   		    $("#div1").replaceWith('<div id="div1"><img src="images/3841275_122122013392_2_04.gif" alt=""></div>');
+   		});
+
+   		$("button").eq(3).click(function(){
+
+   			
+   		 $('<div id="div1"><img src="images/3841275_122122013392_2_05.gif" alt=""></div>').replaceAll("div");
+   		});
+
+
+   	
+
+});
+</script>
+</head>
+<body>
+    <div id="div1">
+    	<img src="images/3841275_122122013392_2_01.gif" alt="">
+    </div>
+	<button>播种</button>
+	<button>生长</button>
+	<button>开花</button>
+	<button>结果</button>
+</body>
+</html>
